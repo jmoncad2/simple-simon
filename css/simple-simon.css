@@ -1,0 +1,28 @@
+.nl-simon-boxes {
+    display: inline-block;
+    margin: 110px;
+}
+
+#nl-simon-yellow {
+    background: yellow;
+    width: 200px;
+    height: 200px;
+}
+
+#nl-simon-blue {
+    background: blue;
+    width: 200px;
+    height: 200px;
+}
+
+#nl-simon-red {
+    background: red;
+    width: 200px;
+    height: 200px;
+}
+
+#nl-simon-green {
+    background: green;
+    width: 200px;
+    height: 200px;
+}
