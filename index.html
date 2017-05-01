@@ -4,33 +4,53 @@
     <meta charset="UTF-8">
     <title>Simon Game</title>
     <link href="css/simple-simon.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
+<h1 id="title">Simone Game</h1>
 
-<div id="ez-wrapper" class="ez-mode container-fluid uni">
-    <div id="ez-simon-yellow" class="ez-simon-boxes ani"></div>
-    <div id="ez-simon-blue" class="ez-simon-boxes ani"></div>
-    <div id="ez-simon-red" class="ez-simon-boxes ani"></div>
-    <div id="ez-simon-counter" class="ez-simon-boxes ani"></div>
+<div id="mode-wrapper">
+<h2 id="select-title">Select Mode</h2>
+<input type="radio" name="mode-select" value="ez-mode">
+Easy Mode
+<br>
+<input type="radio" name="mode-select" value="nl-mode" checked>
+Normal Mode
+<br>
+<input type="radio" name="mode-select" value="hd-mode">
+Hard Mode
+<br>
+    <button id="start">Start</button>
 </div>
 
-<div id="nl-wrapper" class="nl-mode container-fluid uni">
-    <div id="nl-simon-yellow" class="nl-simon-boxes col-md-3 ani"></div>
-    <div id="nl-simon-blue" class="nl-simon-boxes col-md-3 ani"></div>
-    <div id="nl-simon-red" class="nl-simon-boxes col-md-3 ani"></div>
-    <div id="nl-simon-green" class="nl-simon-boxes col-md-3 ani"></div>
-    <div id="nl-simon-counter" class="ez-simon-boxes col-md-3 ani"></div>
+<div id="ez-wrapper" class="ez-mode-wrapper uni">
+    <div id="ez-simon-yellow" data-tile="1" class="ez-simon-boxes ani"></div>
+    <div id="ez-simon-blue" data-tile="2" class="ez-simon-boxes ani"></div>
+    <div id="ez-simon-red" data-tile="3" class="ez-simon-boxes ani"></div>
+    <div id="ez-simon-counter" class="ez-simon-box ani"></div>
 </div>
 
-<div id="hd-wrapper" class="hd-mode container-fluid uni">
-    <div id="hd-simon-yellow" class="hd-simon-boxes ani"></div>
-    <div id="hd-simon-blue" class="hd-simon-boxes ani"></div>
-    <div id="hd-simon-red" class="hd-simon-boxes ani"></div>
-    <div id="hd-simon-green" class="hd-simon-boxes ani"></div>
-    <div id="hd-simon-purple" class="hd-simon-boxes ani"></div>
-    <div id="hd-simon-counter" class="ez-simon-boxes ani"></div>
+<div id="nl-wrapper" class="nl-mode-wrapper uni">
+    <img src="img/004-plain-triangle.png" id="triangle">
+    <div id="nl-simon-yellow" data-tile="1" class="nl-simon-boxes ani"></div>
+    <img src="img/003-plain-circle.png" id="circle">
+    <div id="nl-simon-blue" data-tile="2" class="nl-simon-boxes ani"></div>
+    <br><img src="img/002-plain-square.png" id="square">
+    <div id="nl-simon-red" data-tile="3" class="nl-simon-boxes ani"></div>
+    <img src="img/005-delete-cross.png" id="cross">
+    <div id="nl-simon-green" data-tile="4" class="nl-simon-boxes ani"></div>
+    <div id="nl-simon-counter" class="nl-simon-box ani"></div>
 </div>
+
+<div id="hd-wrapper" class="hd-mode-wrapper uni">
+    <div id="hd-simon-yellow" data-tile="1" class="hd-simon-boxes ani"></div>
+    <div id="hd-simon-blue" data-tile="2" class="hd-simon-boxes ani"></div>
+    <div id="hd-simon-red" data-tile="3" class="hd-simon-boxes ani"></div>
+    <div id="hd-simon-green" data-tile="4" class="hd-simon-boxes ani"></div>
+    <div id="hd-simon-purple" data-tile="5" class="hd-simon-boxes ani"></div>
+    <div id="hd-simon-counter" class="hd-simon-box ani"></div>
+</div>
+
+
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
