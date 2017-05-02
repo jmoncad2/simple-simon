@@ -6,17 +6,19 @@
     <link href="css/simple-simon.css" rel="stylesheet">
 </head>
 <body>
+<p id="round-title">Round</p>
 <h1 id="title">Simone Game</h1>
-
+<div id="spacer"></div>
+<div id="nl-simon-counter" class="nl-simon-box ani"></div>
 <div id="mode-wrapper">
 <h2 id="select-title">Select Mode</h2>
-<input type="radio" name="mode-select" value="ez-mode">
+<input type="radio" name="mode-select" value="easy">
 Easy Mode
 <br>
-<input type="radio" name="mode-select" value="nl-mode" checked>
+<input type="radio" name="mode-select" value="normal" checked>
 Normal Mode
 <br>
-<input type="radio" name="mode-select" value="hd-mode">
+<input type="radio" name="mode-select" value="hard">
 Hard Mode
 <br>
     <button id="start">Start</button>
@@ -38,7 +40,6 @@ Hard Mode
     <div id="nl-simon-red" data-tile="3" class="nl-simon-boxes ani"></div>
     <img src="img/005-delete-cross.png" id="cross">
     <div id="nl-simon-green" data-tile="4" class="nl-simon-boxes ani"></div>
-    <div id="nl-simon-counter" class="nl-simon-box ani"></div>
 </div>
 
 <div id="hd-wrapper" class="hd-mode-wrapper uni">

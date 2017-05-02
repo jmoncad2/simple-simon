@@ -8,27 +8,37 @@ $(document).ready(function () {
 
 var yellowBox = $("#nl-simon-yellow");
     $(yellowBox).click(function simonYellow() {
-        $(yellowBox).fadeOut(25).fadeIn(25);
+        $(yellowBox).fadeOut(200).fadeIn(200);
     });
 
 var blueBox = $("#nl-simon-blue");
     $(blueBox).click(function () {
-        $(blueBox).fadeOut(25).fadeIn(25);
+        $(blueBox).fadeOut(200).fadeIn(200);
     });
 
 var redBox = $("#nl-simon-red");
     $(redBox).click(function simonBlink() {
-        $(redBox).fadeOut(25).fadeIn(25);
+        $(redBox).fadeOut(200).fadeIn(200);
     });
 
 var greenBox = $("#nl-simon-green");
     $(greenBox).click(function () {
-        $(greenBox).fadeOut(25).fadeIn(25);
+        $(greenBox).fadeOut(200).fadeIn(200);
     });
+
+    var sequence, copy, round;
+    var active = true;
+    var mode = "normal";
     
     function startSimon() {
         $("#start").on("click", startgame);
-        $("input[name=mode]").on("change", changeMode);
+        $("input[name=mode-select]").on("change", changeMode);
+    }
+    
+    function startGame() {
+        sequence= [];
+        copy = [];
+        round = 0;
     }
 
         // between 1 and 4

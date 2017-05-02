@@ -1,12 +1,16 @@
 body {
     background-color: #85756E;
     margin: 0;
+    font-family: sans-serif;
+}
+
+#spacer {
+    height: 10px;
 }
 
 #title {
     text-align: center;
-    margin: 3px auto;
-    font-family: sans-serif;
+    margin: 3px 300px;
 }
 
 h2 {
@@ -16,7 +20,7 @@ h2 {
 #mode-wrapper {
     position: relative;
     float: right;
-    margin: 200px 150px;
+    margin: 180px 125px;
     font-size: 2em;
 }
 
@@ -44,6 +48,22 @@ input[type="radio"] {
     display: inline-block;
     width: 250px;
     height: 250px;
+}
+
+#round-title {
+    position: relative;
+    float: left;
+    font-size: 1.5em;
+    margin-left: 5.2em;
+}
+
+#nl-simon-counter {
+    width: 75px;
+    height: 50px;
+    background-color: #551B14;
+    margin-right: 0;
+    margin-left: 7.7em;
+    border-radius: 4px;
 }
 
 #triangle {
