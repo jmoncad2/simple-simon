@@ -20,12 +20,16 @@ h2 {
 #mode-wrapper {
     position: relative;
     float: right;
-    margin: 180px 125px;
+    margin: 0 120px;
     font-size: 2em;
 }
 
 input[type="radio"] {
     transform: scale(1.5);
+}
+
+.info-all {
+    font-size: medium;
 }
 
 #start {
