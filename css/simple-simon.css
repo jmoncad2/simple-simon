@@ -5,7 +5,7 @@ body {
 }
 
 #spacer {
-    height: 10px;
+    height: 7px;
 }
 
 #title {
@@ -32,7 +32,7 @@ input[type="radio"] {
     font-size: medium;
 }
 
-#start {
+#start-game {
     width: 150px;
     height: 75px;
     background-color: #551B14;
@@ -61,13 +61,19 @@ input[type="radio"] {
     margin-left: 5.2em;
 }
 
-#nl-simon-counter {
+#simon-counter {
     width: 75px;
     height: 50px;
-    background-color: #551B14;
-    margin-right: 0;
-    margin-left: 7.7em;
+    background-color: #CDC5B4;
+    margin-left: 3.8em;
     border-radius: 4px;
+    text-align: center;
+    font-size: 2em;
+}
+
+#trouble {
+    position: absolute;
+    font-size: 2em;
 }
 
 #triangle {
@@ -79,7 +85,7 @@ input[type="radio"] {
     transform: rotate(-45deg);
 }
 
-#nl-simon-yellow {
+#yellow {
     background: yellow;
     border-top-left-radius: 7em;
     border-bottom-left-radius: 8px;
@@ -93,7 +99,7 @@ input[type="radio"] {
     transform: rotate(-45deg);
 }
 
-#nl-simon-blue {
+#blue {
     background: blue;
     border-top-right-radius: 7em;
     border-bottom-right-radius: 8px;
@@ -107,7 +113,7 @@ input[type="radio"] {
     transform: rotate(-45deg);
 }
 
-#nl-simon-red {
+#red {
     background: red;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 7em;
@@ -122,8 +128,22 @@ input[type="radio"] {
     transform: rotate(-45deg);
 }
 
-#nl-simon-green {
+#green {
     background: green;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 7em;
+}
+
+.blink {
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-direction: alternate;
+
+}
+
+@-webkit-keyframes blinker {
+    from {opacity: 1.0;}
+    to {opacity: 0.0;}
 }

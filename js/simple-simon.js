@@ -4,47 +4,96 @@
  */
 
 $(document).ready(function () {
-   "use strict";
+    "use strict";
 
-var yellowBox = $("#nl-simon-yellow");
-    $(yellowBox).click(function simonYellow() {
-        $(yellowBox).fadeOut(200).fadeIn(200);
-    });
+    var AiCurrent = [];
+    var round = 0;
+    var i = 0;
+    var active = false;
+    var colors = ["yellow", "blue", "red", "green"];
 
-var blueBox = $("#nl-simon-blue");
-    $(blueBox).click(function () {
-        $(blueBox).fadeOut(200).fadeIn(200);
-    });
-
-var redBox = $("#nl-simon-red");
-    $(redBox).click(function simonBlink() {
-        $(redBox).fadeOut(200).fadeIn(200);
-    });
-
-var greenBox = $("#nl-simon-green");
-    $(greenBox).click(function () {
-        $(greenBox).fadeOut(200).fadeIn(200);
-    });
-
-    var sequence, copy, round;
-    var active = true;
-    var mode = "normal";
-    
-    function startSimon() {
-        $("#start").on("click", startgame);
-        $("input[name=mode-select]").on("change", changeMode);
-    }
-    
-    function startGame() {
-        sequence= [];
-        copy = [];
-        round = 0;
+    function toggleStart() {
+        active = true;
     }
 
-        // between 1 and 4
+    $("#start-game").click("click", toggleStart);
+
+    function nextRound() {
+        $("#round-lose").hide();
+        if (active == true) {
+            AiCurrent.push(colors[randomNumber()]);
+            console.log("AI " + AiCurrent);
+            console.log("<=========>");
+        }
+
+        AiCurrent.forEach(function (el, ind) {
+            var idTimer = setTimeout(function () {
+                aniClick("#" +el);
+            }, (1000 * ind));
+
+            console.log(ind);
+            console.log(AiCurrent.length);
+
+        });
+
+
+    }
+
+    function match(idTag) {
+        console.log(AiCurrent[i]);
+        console.log(idTag);
+        if (AiCurrent[i] == idTag) {
+            ++i;
+            if (i == AiCurrent.length) {
+                console.log("Round Complete");
+                i = 0;
+                nextRound();
+            }
+        } else {
+            console.log("Game Over");
+            i = 0;
+        }
+    }
+
+    function ani(element) {
+        $(element).animate({
+            opacity: .5
+        }, 500).animate({
+            opacity: 1
+        }, 500)
+    }
+
+    function aniClick(element) {
+        $(element).animate({
+            width: 125,
+            height: 125
+        }, 500).animate({
+            width: 250,
+            height: 250
+        }, 500)
+    }
+
+    $(".nl-simon-boxes").on("click", function () {
+        ani($(this));
+        match($(this).attr("id"));
+    });
+
+
+    $("#start-game").click("click", nextRound);
+
+    // function arClass() {
+    //     $(".nl-simon-boxes").addClass("blink").removeClass("blink");
+    //     return false;
+    // }
+
+    $("#start-game").on("click", function () {
+        // $(".nl-simon-boxes").removeClass("blink");
+        // $(".nl-simon-boxes").addClass("blink");
+        return false;
+    });
+
     function randomNumber() {
-        return Math.floor((Math.random()*4)+1);
+        return Math.floor((Math.random() * 3) );
     }
-
 
 });
