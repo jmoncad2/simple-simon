@@ -22,6 +22,7 @@ $(document).ready(function () {
         $("#round-lose").hide();
         if (active == true) {
             AiCurrent.push(colors[randomNumber()]);
+            round = AiCurrent.length;
             console.log("AI " + AiCurrent);
             console.log("<=========>");
         }
