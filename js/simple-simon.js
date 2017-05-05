@@ -12,6 +12,8 @@ $(document).ready(function () {
     var active = false;
     var colors = ["yellow", "blue", "red", "green"];
 
+//===============================================================================================================================
+
     function toggleStart() {
         active = true;
     }
@@ -51,12 +53,15 @@ $(document).ready(function () {
                 nextRound();
             }
         } else {
+            $("#round-lose").show();
             console.log("Game Over");
             i = 0;
         }
     }
 
-    function ani(element) {
+    //===============================================================================================================================
+
+    function animate(element) {
         $(element).animate({
             opacity: .5
         }, 500).animate({
@@ -66,8 +71,7 @@ $(document).ready(function () {
 
     function aniClick(element) {
         $(element).animate({
-            width: 125,
-            height: 125
+
         }, 500).animate({
             width: 250,
             height: 250
@@ -75,7 +79,7 @@ $(document).ready(function () {
     }
 
     $(".nl-simon-boxes").on("click", function () {
-        ani($(this));
+        animate($(this));
         match($(this).attr("id"));
     });
 
