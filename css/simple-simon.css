@@ -54,28 +54,6 @@ input[type="radio"] {
     height: 250px;
 }
 
-#round-title {
-    position: relative;
-    float: left;
-    font-size: 1.5em;
-    margin-left: 5.2em;
-}
-
-#simon-counter {
-    width: 75px;
-    height: 50px;
-    background-color: #CDC5B4;
-    margin-left: 3.8em;
-    border-radius: 4px;
-    text-align: center;
-    font-size: 2em;
-}
-
-#trouble {
-    position: absolute;
-    font-size: 2em;
-}
-
 #triangle {
     position: absolute;
     float: left;
